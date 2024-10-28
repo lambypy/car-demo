@@ -1,7 +1,5 @@
 package com.lbg;
-import com.lbg.classes.Car;
-import com.lbg.classes.CarColour;
-import com.lbg.classes.CarMake;
+import com.lbg.classes.*;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -9,13 +7,18 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        // javaPart1();
+        javaPart2();
+    }
+
+    private static void javaPart1() {
         System.out.println("hi");
 
         Car bartCar = new Car();
         System.out.println(bartCar.getSpeed());
         System.out.println(bartCar);
         System.out.println(bartCar.getMake());
-        bartCar.setModel("Not a Blah");
+        bartCar.setModel(CarModel.FIESTA);
         bartCar.setColour(CarColour.BLACK);
         System.out.println("The car colour is " + bartCar.getColour());
         bartCar.setColour(CarColour.RED);
@@ -26,7 +29,7 @@ public class Main {
         System.out.println(bartCar.getSpeed());
 
 
-        Car lisaCar = new Car("Blah2", CarColour.RED);
+        Car lisaCar = new Car(CarModel.FIESTA, CarColour.RED);
         lisaCar.speed_change(20);
         System.out.println(lisaCar.getSpeed());
         System.out.println();
@@ -34,7 +37,7 @@ public class Main {
         Car[] cars = new Car[3];
         cars[0] = bartCar;
         cars[1] = lisaCar;
-        cars[2] = new Car("Blah44", CarColour.BLACK);
+        cars[2] = new Car(CarModel.FIESTA, CarColour.BLACK);
 
         for (Car car : cars) {
             System.out.println(car.getColour());
@@ -47,7 +50,7 @@ public class Main {
         Random random = new Random();
         for (int i = 0; i < 100; i++) {
             int index = random.nextInt(CarColour.values().length);
-            newCars[i] = new Car("Ferrari", CarColour.values()[index]);
+            newCars[i] = new Car(CarModel.FIESTA, CarColour.values()[index]);
             newCars[i].setColour(CarColour.values()[index]);
         }
 
@@ -63,5 +66,11 @@ public class Main {
         System.out.println(bartCar);
         lisaCar.setMake(CarMake.TESLA);
         System.out.println(lisaCar);
+    }
+
+    private static void javaPart2(){
+        System.out.println("Java Part 2");
+        // Vehicle v1 = new Vehicle();
+
     }
 }
