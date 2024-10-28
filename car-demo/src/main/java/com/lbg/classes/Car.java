@@ -2,18 +2,36 @@ package com.lbg.classes;
 
 public class Car {
 
-    public Car(String model) {
+    // examples of constructor method overloading (different ways of altering the same Car class
+    public Car(String model, CarColour color) {
         this.setModel(model);
+        this.colour = color;
     }
 
 
     public Car(){
-        this.make = "Unknown";
+        this.make = CarMake.FERRARI;
         this.setModel("Unknown"); // makes sure that the model is actually valid
     }
 
+    /*
+    public Car(){
+        this()
+    }
+    */
+
+
+    @Override
+    public String toString() {
+        // return super.toString();
+        String info = "Car: " + this.getMake();
+        info += "\nModel: " + this.getModel();
+        return info;
+    }
+
+
     private int speed;
-    private String make;
+    private CarMake make;
     private CarColour colour;
 
 
@@ -31,7 +49,7 @@ public class Car {
         return this.speed;
     }
 
-    public String get_make(){
+    public CarMake getMake(){
         return this.make;
     }
 
@@ -43,6 +61,11 @@ public class Car {
 
     public void setColour(CarColour newColour){
         this.colour = newColour;
+    }
+
+
+    public void setMake(CarMake newMake){
+        this.make = newMake;
     }
 
 
