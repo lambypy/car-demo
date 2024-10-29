@@ -70,7 +70,7 @@ public class Main {
 
     private static void javaPart2(){
         System.out.println("Java Part 2");
-        // Vehicle v1 = new Vehicle();
+        Vehicle v1 = new Vehicle();
         Vehicle v2 = new Vehicle();
         Car c1 = new Car(CarModel.FIESTA, CarColour.BLACK);
         System.out.println(v2);
@@ -83,6 +83,16 @@ public class Main {
 
 
         Car c2 = new Car();
+        String serviceInfo = v3.performService();
+        System.out.println(serviceInfo);
+        System.out.println(c1.performService());
+        System.out.println();
 
+        Vehicle[] vehicles = {v1, v2, v3, c1, c2};
+        // example of polymorphism
+        for (Vehicle v: vehicles){
+            System.out.println(v); //toString
+            System.out.println(v.performService());
+        }
     }
 }

@@ -2,7 +2,8 @@ package com.lbg.classes;
 
 public class Car extends Vehicle{
 
-    // examples of constructor method overloading (different ways of altering the same Car class
+    // examples of constructor method overloading (different ways of altering the same Car class)
+    // can add CarMake make 2nd here and make sure that it works everywhere else.
     public Car(CarModel model, CarColour color) {
         super(4, "Car Unregistered");
         this.setModel(model);
@@ -32,6 +33,13 @@ public class Car extends Vehicle{
         return info;
     }
 
+
+    @Override
+    public String performService() {
+        String base =  super.performService();
+        base += "...I am a car";
+        return base;
+    }
 
     private int speed;
     private CarMake make;

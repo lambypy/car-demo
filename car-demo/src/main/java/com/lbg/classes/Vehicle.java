@@ -16,6 +16,11 @@ public class Vehicle {
     }
 
 
+    public String performService(){
+        return this.getRegistrationNumber() + ": Vehicle is being serviced";
+    }
+
+
     @Override
     public String toString() {
         //return super.toString(); looking for base java.obj.lang class
