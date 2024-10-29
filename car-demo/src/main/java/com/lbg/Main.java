@@ -71,6 +71,18 @@ public class Main {
     private static void javaPart2(){
         System.out.println("Java Part 2");
         // Vehicle v1 = new Vehicle();
+        Vehicle v2 = new Vehicle();
+        Car c1 = new Car(CarModel.FIESTA, CarColour.BLACK);
+        System.out.println(v2);
+        System.out.println(c1.getRegistrationNumber());
+        System.out.println(c1.getNumberOfWheels());
+
+        Vehicle v3 = new Vehicle(2, "LS 8");
+        System.out.println(v3);
+        System.out.println(v2);
+
+
+        Car c2 = new Car();
 
     }
 }

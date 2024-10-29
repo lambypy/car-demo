@@ -4,6 +4,7 @@ public class Car extends Vehicle{
 
     // examples of constructor method overloading (different ways of altering the same Car class
     public Car(CarModel model, CarColour color) {
+        super(4, "Car Unregistered");
         this.setModel(model);
         this.colour = color;
     }
@@ -12,6 +13,8 @@ public class Car extends Vehicle{
     public Car(){
         this.make = CarMake.FERRARI;
         this.setModel(CarModel.FIESTA); // makes sure that the model is actually valid
+        // or could do:
+        // this(parameters)
     }
 
     /*
