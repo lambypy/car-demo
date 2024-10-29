@@ -94,5 +94,9 @@ public class Main {
             System.out.println(v); //toString
             System.out.println(v.performService());
         }
+
+
+        SubCar sc = new SubCar();
+
     }
 }

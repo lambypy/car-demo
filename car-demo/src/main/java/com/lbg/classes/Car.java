@@ -1,6 +1,6 @@
 package com.lbg.classes;
 
-public class Car extends Vehicle{
+public final class Car extends Vehicle{
 
     // examples of constructor method overloading (different ways of altering the same Car class)
     // can add CarMake make 2nd here and make sure that it works everywhere else.
